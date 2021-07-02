@@ -3,7 +3,7 @@
     if (preferences['analytics'] && preferences['analytics'].status === 'given') {
       td.setSignedMode()
       td.unblockEvents()
-    } else if (preferences['analytics'].status === 'rejected') {
+    } else if (preferences['analytics'] && preferences['analytics'].status === 'rejected') {
       td.setAnonymousMode()
       td.blockEvents()
     }
